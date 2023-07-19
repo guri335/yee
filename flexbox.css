@@ -15,3 +15,6 @@
     align-content:baseline;
    
 }
+#five{
+    flex-shrink: 3;
+}

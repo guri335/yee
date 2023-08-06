@@ -1,5 +1,5 @@
 #main-head{
-    height: calc(100vh);
+    height: calc(100vh - 54px);
     background-image: url(tree-736885_1280.jpg) ;
     background-size: cover;
 }

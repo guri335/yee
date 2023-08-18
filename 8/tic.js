@@ -21,7 +21,7 @@ function calculatewinner(squares) {
 
     for (let i = 0; i < winning_lines.length; i++) {
         const [a, b, c] = winning_lines[i];
-        if (squares[a] && squares[b] === squares[b] && squares[b] === squares[c]) {
+        if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c]) {
             showwinner(squares[a]);
             setTimeout(() => resetBoard(squares[a]), 1000)
             return squares[a];
@@ -56,13 +56,13 @@ function showwinner(winner) {
         alert_box.html(`${winner} <strong>Won!</strong>`)
     }
     else {
-        alert_box.html(`It's a Draw`);
+        alert_box.html(`It's a Draw!`);
     }
     alert_box.slideDown();
     setTimeout(() => alert_box.slideUp(), 1000);
 }
 function render_square(index) {
-    const val = state.squares[index] ? state.squares[index] : "&nbsp;"
+    const val = state.squares[index] ? state.squares[index] : "&nbsp;";
     return `<div value=${index} class="box col-lg-4 col-md-4 col-sm-4 col-xs-4" onclick="boxclick(${index})">${val}</div>`
 }
 function renderboard() {
@@ -94,6 +94,6 @@ $(() => {
     renderboard();
     $("#alert-box").slideUp(0.0001);
     $("#clear").on("click", ()=>resetBoard(null))
-    $("#reset").on("click", ()=>resetGame(null))
+    $("#reset").on("click", ()=>resetGame())
 
 })

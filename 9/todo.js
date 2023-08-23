@@ -1,5 +1,5 @@
 var enterButton = document.getElementById("enter");
-var input = document.getElementById("userinput");
+var input = document.getElementById("usernput");
 var ul = document.querySelector("ul");
 var item = document.getElementsByTagName("li");
 
